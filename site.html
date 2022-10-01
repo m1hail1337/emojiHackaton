@@ -13,22 +13,25 @@
         <img src="http://professorweb.ru/downloads/pen_medium.gif" alt="Нормальная кисть" onclick="changeThickness(5, this)"> 
         <img src="http://professorweb.ru/downloads/pen_thick.gif" alt="Толстая кисть" onclick="changeThickness(10, this)">
     </div>
-        <div class="CanvasContainer">
-            <canvas id="drawingCanvas" width="465" height="300"></canvas>
+        <div class="CanvasContainer" style="position: relative;">
+            <canvas id="drawingCanvas" width="144" height="144" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+            <canvas id="layerShapes" width="144" height="144" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+            <canvas id="layerEyes" width="144" height="144" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+            <canvas id="layerMouthes" width="144" height="144" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
         </div>
         <div>
-        <div class="Toolbar" style="float: bottom">
+        <div class="Toolbar" style="position:relative; left: 144px">
             - Форма -<br>
-            <img id="eyes1" src="res/eyes1.png" onclick="setEyes(1, this)">
-            <img src="res/eyes2.png" onclick="setEyes(2, this)">
+            <img id="shape1" src="res/shape1.png" onclick="changeShapes(this)">
         </div>
-        <div class="Toolbar" style="float: bottom">
+        <div class="Toolbar" style="position:relative; left: 144px">
             - Глаза -<br>
-            <img src="res/eyes1.png" alt="глаза1" onclick="setEyes()"><br>
+            <img id="eyes1" src="res/eyes1.png" onclick="changeEyes(this)">
+            <img id="eyes2" src="res/eyes2.png" onclick="changeEyes(this)">
         </div>
-        <div class="Toolbar" style="float: inline-start">
+        <div class="Toolbar" style="position:relative; left: 144px">
         - Рот -<br>
-        <img src="http://professorweb.ru/downloads/pen_thin.gif" alt="Тонкая кисть" onclick="changeThickness(1, this)">
+        <img id="mouth1" src="res/mouth1.png" onclick="changeMouthes(this)">
     </div>
     </div>
     <div class="Toolbar">

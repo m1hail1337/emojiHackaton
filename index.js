@@ -1,12 +1,17 @@
 let isDrawing;
 let canvas;
 let context;
+let layerShapes;
+let layerMouthes;
+let layerEyes;
 let previousThicknessElement;
 let previousColorElement;
 window.onload = function() {
       canvas = document.getElementById("drawingCanvas");
       context = canvas.getContext("2d");
-       
+      shapesContext = document.getElementById("layerShapes").getContext("2d");
+	  eyesContext = document.getElementById("layerEyes").getContext("2d");
+	  mouthesContext = document.getElementById("layerMouthes").getContext("2d");
       // Подключаем требуемые для рисования события
       canvas.onmousedown = startDrawing;
       canvas.onmouseup = stopDrawing;
@@ -70,6 +75,9 @@ function stopDrawing() {
 }
 function clearCanvas() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
+	shapesContext.clearRect(0, 0, canvas.width, canvas.height);
+	eyesContext.clearRect(0, 0, canvas.width, canvas.height);
+	mouthesContext.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 function saveCanvas() {
