@@ -23,6 +23,7 @@ body {
 }
 
 .CanvasContainer {
+    float: left;
     clear: both;
 }
 

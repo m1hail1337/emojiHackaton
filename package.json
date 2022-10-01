@@ -1,6 +1,19 @@
 {
-  "dependencies": {
-    "bower": "^1.8.14",
-    "file-saver": "^2.0.5"
-  }
+  "name": "emoproject",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node static-file-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m1hail1337/emojiHackaton.git"
+  },
+  "author": "mihail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m1hail1337/emojiHackaton/issues"
+  },
+  "homepage": "https://github.com/m1hail1337/emojiHackaton#readme",
+  "description": ""
 }

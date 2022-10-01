@@ -13,12 +13,26 @@
         <img src="http://professorweb.ru/downloads/pen_medium.gif" alt="Нормальная кисть" onclick="changeThickness(5, this)"> 
         <img src="http://professorweb.ru/downloads/pen_thick.gif" alt="Толстая кисть" onclick="changeThickness(10, this)">
     </div>
-    <div class="CanvasContainer">
-        <canvas id="drawingCanvas" width="500" height="300"></canvas>
+        <div class="CanvasContainer">
+            <canvas id="drawingCanvas" width="465" height="300"></canvas>
+        </div>
+        <div>
+        <div class="Toolbar" style="float: bottom">
+            - Форма -<br>
+            <img src="/emojiList/emoji1.png" onclick="changeThickness(1, this)">
+        </div>
+        <div class="Toolbar" style="float: bottom">
+            - Глаза -<br>
+            <img src="http://professorweb.ru/downloads/pen_thin.gif" alt="Тонкая кисть" onclick="changeThickness(1, this)">
+        </div>
+        <div class="Toolbar" style="float: bottom">
+        - Рот -<br>
+        <img src="http://professorweb.ru/downloads/pen_thin.gif" alt="Тонкая кисть" onclick="changeThickness(1, this)">
+    </div>
     </div>
     <div class="Toolbar">
         - Операции-<br>
-        <button onclick="saveEmoji()">Сохранить содержимое Canvas</button>
+        <button onclick="saveCanvas()">Сохранить содержимое Canvas</button>
         <button onclick="clearCanvas()">Очистить Canvas</button>
         <button onclick="cutPicture()">Обрезать эмоджи</button>
         <div id="savedCopyContainer">
@@ -27,5 +41,5 @@
         </div>
     </div>
 </body>
-<script src="main.js"></script>
+<script src="index.js"></script>
 <script src="FileSaver.js"></script>
