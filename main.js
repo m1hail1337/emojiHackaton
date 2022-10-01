@@ -1,4 +1,4 @@
-import {saveAs} from 'file-saver';
+
 
 
 let canvas;
@@ -12,7 +12,6 @@ window.onload = function() {
       // Подключаем требуемые для рисования события
       canvas.onmousedown = startDrawing;
       canvas.onmouseup = stopDrawing;
-      canvas.onmouseout = stopDrawing;
       canvas.onmousemove = draw;
    }
 
@@ -75,10 +74,11 @@ function clearCanvas() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
 }
 function saveEmoji() {
-    let link = document.createElement('a');
-    link.download = 'emoji.png';
-    link.href = document.getElementById("CanvasContainer").toDataURL()
-	link.click();
-	// Отображаем данные холста в элементе <img>
+    FileSaver.saveAs("https://httpbin.org/image", "image.jpg");
+}
+try {
+    var isFileSaverSupported = !!new Blob;
+} catch (e) {}
+function backgroundCircle() {
 	
 }
