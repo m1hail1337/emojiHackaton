@@ -16,6 +16,7 @@ body {
 }
 
 .Toolbar button {
+    float: left;
     padding: 6px;
     margin: 7px 2px;
     font-variant: normal;

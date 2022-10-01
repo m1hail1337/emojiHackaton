@@ -19,13 +19,14 @@
         <div>
         <div class="Toolbar" style="float: bottom">
             - Форма -<br>
-            <img src="/emojiList/emoji1.png" onclick="changeThickness(1, this)">
+            <img id="eyes1" src="res/eyes1.png" onclick="setEyes(1, this)">
+            <img src="res/eyes2.png" onclick="setEyes(2, this)">
         </div>
         <div class="Toolbar" style="float: bottom">
             - Глаза -<br>
-            <img src="http://professorweb.ru/downloads/pen_thin.gif" alt="Тонкая кисть" onclick="changeThickness(1, this)">
+            <img src="res/eyes1.png" alt="глаза1" onclick="setEyes()"><br>
         </div>
-        <div class="Toolbar" style="float: bottom">
+        <div class="Toolbar" style="float: inline-start">
         - Рот -<br>
         <img src="http://professorweb.ru/downloads/pen_thin.gif" alt="Тонкая кисть" onclick="changeThickness(1, this)">
     </div>
@@ -42,4 +43,4 @@
     </div>
 </body>
 <script src="index.js"></script>
-<script src="FileSaver.js"></script>
+<script src="painter.js"></script>

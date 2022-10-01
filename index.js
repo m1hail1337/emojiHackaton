@@ -1,6 +1,4 @@
-
-
-
+let isDrawing;
 let canvas;
 let context;
 let previousThicknessElement;
@@ -73,21 +71,20 @@ function stopDrawing() {
 function clearCanvas() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
 }
-function saveEmoji() {
-    FileSaver.saveAs("https://httpbin.org/image", "image.jpg");
-}
+
 function saveCanvas() {
     // Находим элемент <img>
-	var imageCopy = document.getElementById("savedImageCopy");
+	let imageCopy = document.getElementById("savedImageCopy");
 	
 	// Отображаем данные холста в элементе <img>
 	imageCopy.src = canvas.toDataURL();
 	
 	// Показываем элемент <div>, делая изображение видимым
 	// делая изображение видимым
-	var imageContainer = document.getElementById("savedCopyContainer");
+	let imageContainer = document.getElementById("savedCopyContainer");
     imageContainer.style.display = "block";
 }
-function backgroundCircle() {
+
+function cutPicture() {
 	
 }
