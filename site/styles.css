@@ -1,5 +1,5 @@
 body {
-    background: white;
+    background: green;
 }
 
 .Toolbar {
@@ -27,6 +27,7 @@ body {
 }
 
 .CanvasContainer {
+    background: white;
     padding: 0px 3px;
     float: left;
     clear: both;
