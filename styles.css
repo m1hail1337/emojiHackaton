@@ -3,6 +3,7 @@ body {
 }
 
 .Toolbar {
+    position: relative;
     float: left;
     font-family: 'Trebuchet MS'; 
     font-size: 14px;
@@ -13,6 +14,8 @@ body {
     margin-bottom: 1px;
     margin-right: 1px;
     border: 1px solid #7B899B;
+    display: flex;
+    flex-direction: column;
 }
 
 .Toolbar button {
@@ -24,11 +27,13 @@ body {
 }
 
 .CanvasContainer {
+    padding: 0px 3px;
     float: left;
     clear: both;
 }
 
 canvas {
+    position: fixed;
     border: 1px solid #7B899B;
 }
 
@@ -48,10 +53,11 @@ img.Selected {
 }
 
 #savedCopyContainer {
+    right: 11px;
+    margin-top: 14px;
     display: none;
 }
 
 #savedCopyContainer img {
-    width: 144px;
-    height: 144px;
+    display: block;
 }

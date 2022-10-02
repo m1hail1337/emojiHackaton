@@ -15,8 +15,6 @@ function changeEyes(item) {
         previousEyesItem.className = "";
 
     previousEyesItem = item;
-    // Привязываем функцию к событию onload
-    // Это указывает браузеру, что делать, когда изображение загружено
     eyesContext.drawImage(img, 0, 0);
 }
 
@@ -31,8 +29,6 @@ function changeShapes(item) {
         previousShapesItem.className = "";
 
     previousShapesItem = item;
-    // Привязываем функцию к событию onload
-    // Это указывает браузеру, что делать, когда изображение загружено
     shapesContext.drawImage(img, 0, 0);
 }
 
@@ -46,7 +42,5 @@ function changeMouthes(item) {
         previousMouthesItem.className = "";
 
     previousMouthesItem = item;
-    // Привязываем функцию к событию onload
-    // Это указывает браузеру, что делать, когда изображение загружено
     mouthesContext.drawImage(img, 0, 0);
 }

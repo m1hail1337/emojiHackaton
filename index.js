@@ -78,12 +78,18 @@ function clearCanvas() {
 	shapesContext.clearRect(0, 0, canvas.width, canvas.height);
 	eyesContext.clearRect(0, 0, canvas.width, canvas.height);
 	mouthesContext.clearRect(0, 0, canvas.width, canvas.height);
+	previousEyesItem = null;
+	previousShapesItem = null;
+	previousMouthesItem = null;
 }
 
 function saveCanvas() {
     // Находим элемент <img>
 	let imageCopy = document.getElementById("savedImageCopy");
-	
+	context.drawImage(document.getElementById(previousShapesItem.id),0,0);
+	context.drawImage(document.getElementById(previousMouthesItem.id),0,0);
+	context.drawImage(document.getElementById(previousEyesItem.id),0,0);
+	context.drawImage(canvas,0,0);
 	// Отображаем данные холста в элементе <img>
 	imageCopy.src = canvas.toDataURL();
 	
