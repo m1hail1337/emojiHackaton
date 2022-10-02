@@ -9,7 +9,7 @@ class StaticVideoCreate:
         # create the audio clip object
         audio_clip = AudioFileClip("voice.mp3")
         # create the image clip object
-        image_clip = ImageClip("smile.jpg")
+        image_clip = ImageClip("smile.png")
         # use set_audio method from image clip to combine the audio with the image
         video_clip = image_clip.set_audio(audio_clip)
         # specify the duration of the new clip to be the duration of the audio clip
