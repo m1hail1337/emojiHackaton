@@ -7,7 +7,8 @@ app.set('port', 8080);
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.post('/site.html', function (req, res) {
-    exec('static_video/static_video_creation.py',
+    // exec('static_video/static_video_creation.py',
+    exec('cmd',
         (error, stdout, stderr) => {
             console.log(stdout);
             console.log(stderr);
