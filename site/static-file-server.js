@@ -5,8 +5,7 @@ app.set('port', 8080);
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.post('/site.html', function (req, res) {
-    console.log(req.body);
-    // res.redirect('site.html');
+    const { exec } = require('child_process');
     res.redirect('back');
 });
 app.listen(app.get('port'), function () {
