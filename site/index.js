@@ -39,8 +39,15 @@ function saveCanvas() {
 	// делая изображение видимым
 	let imageContainer = document.getElementById("savedCopyContainer");
     imageContainer.style.display = "block";
+	let video = document.getElementById("video");
+	video.height = 0;
 }
 
 function cutPicture() {
-	
+	let video = document.getElementById("video");
+	video.height = 175;
+	let imageContainer = document.getElementById("savedCopyContainer");
+	let imageCopy = document.getElementById("savedImageCopy");
+    imageContainer.style.display = "none";
+	imageCopy.src = "";
 }

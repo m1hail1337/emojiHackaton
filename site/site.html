@@ -15,11 +15,14 @@
             <button onclick="clearCanvas()">Очистить</button>
             <button onclick="cutPicture()">Обрезать</button>
             <form action="/site.html" method="post">
-                <button>Temp</button>
+                <!-- <button>Temp</button> -->
                 <div id="savedCopyContainer" style="position: relative;">
                     <img id="savedImageCopy" style="width: 175px; height: 175px"><br>
                 </div>
             </form>
+            <video id="video"  width="175" height="0" controls>
+                <source src="/static_video/output.mp4" type=video/mp4>
+            </video>
             <div><img id="logo" src="res/logo.png" style="margin-top: 18px; margin-right: 10px;"><br></div>
         </div>
     </div>
