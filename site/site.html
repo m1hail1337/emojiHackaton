@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<body>  
+
+<body>
     <link rel="stylesheet" href="styles.css">
-        <div class="CanvasContainer" style="position: relative;">
-            <canvas id="drawingCanvas" width="144" height="144" style="width: 180px; height: 180px"></canvas>
-            <canvas id="layerShapes" width="144" height="144"style="width: 180px; height: 180px"></canvas>
-            <canvas id="layerEyes" width="144" height="144"style="width: 180px; height: 180px"></canvas>
-            <canvas id="layerMouthes" width="144" height="144"style="width: 180px; height: 180px"></canvas>
-            <div class="Toolbar" style="margin-top: 184px; width: 155px; height: 155px">
-                - Операции-<br>
+    <div class="CanvasContainer" style="position: relative;">
+        <canvas id="drawingCanvas" width="144" height="144" style="width: 180px; height: 180px"></canvas>
+        <canvas id="layerShapes" width="144" height="144" style="width: 180px; height: 180px"></canvas>
+        <canvas id="layerEyes" width="144" height="144" style="width: 180px; height: 180px"></canvas>
+        <canvas id="layerMouthes" width="144" height="144" style="width: 180px; height: 180px"></canvas>
+        <div class="Toolbar" style="margin-top: 184px; width: 155px; height: 155px">
+            - Операции-<br>
+            <form action="/site.html" method="post">
                 <button onclick="saveCanvas()">Сохранить</button>
-                <button onclick="clearCanvas()">Очистить</button>
-                <button onclick="cutPicture()">Обрезать</button>
-                <div id="savedCopyContainer" style="position: relative;">
-                   <img id="savedImageCopy" style="width: 175px; height: 175px"><br>
-                </div>
+            </form>
+            <button onclick="clearCanvas()">Очистить</button>
+            <button onclick="cutPicture()">Обрезать</button>
+            <div id="savedCopyContainer" style="position: relative;">
+                <img id="savedImageCopy" style="width: 175px; height: 175px"><br>
             </div>
         </div>
-        <div>
+    </div>
+    <div>
         <div class="Toolbar">
             - Форма -<br>
             <img id="shape1" src="res/shape1.png" onclick="changeShapes(this)">
@@ -29,12 +32,12 @@
             <img id="eyes4" src="res/eyes4.png" onclick="changeEyes(this)">
         </div>
         <div class="Toolbar">
-        - Рот -<br>
+            - Рот -<br>
             <img id="mouth1" src="res/mouth1.png" onclick="changeMouthes(this)">
             <img id="mouth2" src="res/mouth2.png" onclick="changeMouthes(this)">
             <img id="mouth3" src="res/mouth3.png" onclick="changeMouthes(this)">
             <img id="mouth4" src="res/mouth4.png" onclick="changeMouthes(this)">
-    </div>
+        </div>
     </div>
 </body>
 <script src="index.js"></script>
