@@ -1,11 +1,12 @@
-var express = require('express'),
-    app = express();
-var bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const { exec } = require('child_process');
+
 app.set('port', 8080);
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.post('/site.html', function (req, res) {
-    const { exec } = require('child_process');
     res.redirect('back');
 });
 app.listen(app.get('port'), function () {
